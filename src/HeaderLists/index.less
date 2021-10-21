@@ -1,0 +1,111 @@
+.pageContent_header {
+  z-index: 10;
+  background-color: white;
+  // display: flex;
+  // flex-direction: row;
+  // min-height: 75px;
+  height: auto;
+  .header_container {
+    display: flex;
+
+    align-items: center;
+    min-height: 70px;
+    max-width: 1200px;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    //   display: inline-block;
+    // justify-content: space-between;
+    .menuLists,
+    .badgeLists {
+      height: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .menuLists {
+      // margin-right: 10%;
+      // height: 100%;
+      // padding: 10px 0px;
+      min-height: 60px;
+      .menuArea {
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 15px;
+        cursor: pointer;
+        min-width: 100px;
+        width: auto;
+        p {
+          margin: 0;
+          font-size: 20px;
+          margin-left: 5px;
+          word-break: keep-all;
+          line-height: 1;
+        }
+      }
+      .menuArea:hover {
+        border-bottom: 3px solid rgb(28, 175, 219);
+      }
+    }
+    .badgeLists {
+      // max-width: 0px;
+      overflow: hidden;
+      .badgeArea {
+        display: flex;
+        margin: 15px;
+        min-width: 85px;
+        flex-direction: row;
+        align-items: center;
+        // justify-content: center;
+        margin-right: 15px;
+        cursor: pointer;
+        a {
+          margin: 0;
+          font-size: 20px;
+          margin-left: 5px;
+          word-break: keep-all;
+        }
+      }
+    }
+    .menuListDetail {
+      /* float: left; */
+      position: absolute;
+      /* top: 100%; */
+      // top: 75px;
+      margin-top: 75px;
+      height: 200px;
+      /* width: 85%; */
+      max-width: 1200px;
+      background-color: white;
+      width: 100%;
+    }
+  }
+}
+@media screen and (min-width: 1000px) {
+  .header_container {
+    flex-direction: row;
+    .menuLists {
+      width: calc(100% - 375px);
+      justify-content: space-evenly;
+    }
+
+    .badgeLists {
+      width: 350px;
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .header_container {
+    flex-direction: column;
+    .menuLists,
+    .badgeLists {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+}

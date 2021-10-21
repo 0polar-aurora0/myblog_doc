@@ -1,0 +1,7 @@
+# modules
+/node_modules
+/.umi
+/src/.umi
+/npm-debug.log*
+/yarn-error.log
+/yarn.lock
